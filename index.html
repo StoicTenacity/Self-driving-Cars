@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Self-driving car - No libraries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- leaderboard and counter-->
+    <section id="leaderboard">
+        <h2>Top 5 Cars: </h2>
+        <ol id="list"></ol>
+
+        <div id="remainingCounter">
+        <label for="remaining">Remaining cars: </label>
+        <span id="counterDisplay"></span>
+  </div>
+    </section>
+
+    <canvas id="carCanvas" hidden></canvas>
+    <div id="verticalButtons">
+        <h1>Self-driving Cars</h1>
+
+        <label>Runtime:</label>
+        <div class="clock">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+
+        <p>Number of cars: 
+            <input type="number" id="carAmt" min="100" max="1000" step="100" value="200">
+        </p>
+        
+        <p>Mutation Amount: 
+            <input type="number" id="mutAmt" min="0" max="1" step="0.1" value="0.1">
+        </p>
+        
+
+        <button id="startBtn" onclick="start()"> Start</button>
+        <br></br>
+        
+
+
+        <button id="saveBtn" hidden onclick="save()">💾 Save best brain</button>
+        <button id="discardBtn" hidden onclick="discard()">🗑️ Delete saved brain</button>
+        <br></br>
+        <button id="pauseBtn" hidden onclick="pause()"> Pause</button>
+        <button id="resumeBtn" hidden onclick="resume()"> Resume</button>
+        <br></br>
+        <button id="neuralNet" hidden onclick="toggleNeuralView()"> Show/Hide neural network</button>
+
+        
+    </div>
+    <canvas id="networkCanvas" hidden></canvas>
+    <script src="visualizer.js"></script>
+    <script src="network.js"></script>
+    <script src="sensor.js"></script>
+    <script src="utils.js"></script>
+    <script src="road.js"></script>
+    <script src="controls.js"></script>
+    <script src="car.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
