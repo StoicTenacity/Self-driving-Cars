@@ -1,5 +1,7 @@
 # Self-driving Cars
 
+**Please note that it take several attempts to train the cars to dodge around traffic successfully, refresh the page and try again!**
+
 [Demo page](https://stoictenacity.github.io/Self-driving-Cars/)
 
 Features:
